@@ -1,5 +1,10 @@
-package visitor.exercice;
+package visitor.exercice1;
 
+
+import visitor.exercice1.element.Fichier;
+import visitor.exercice1.element.FichierImage;
+import visitor.exercice1.element.FichierWord;
+import visitor.exercice1.visitor.FichierVisitor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +17,12 @@ public class Main {
         // Calculer les méta data pour chaque fichiers
         for (Fichier fichier : fichiers) {
             MetaDatas metaDatas = calculerMetaData(fichier);
+        }
+
+
+        FichierVisitor fichierVisitor = new FichierVisitor();
+        for (Fichier fichier : fichiers) {
+            fichier.accept(fichierVisitor);
         }
     }
 

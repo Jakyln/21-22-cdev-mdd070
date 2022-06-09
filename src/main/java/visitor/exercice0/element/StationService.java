@@ -1,4 +1,6 @@
-package visitor;
+package visitor.exercice0.element;
+
+import visitor.exercice0.visitor.Visitor;
 
 public class StationService implements PointDInteret {
 

@@ -1,4 +1,6 @@
-package visitor.exercice;
+package visitor.exercice1.element;
+
+import visitor.exercice1.visitor.Visitor;
 
 public class FichierImage implements Fichier {
 
@@ -22,6 +24,11 @@ public class FichierImage implements Fichier {
     @Override
     public String getType() {
         return "docx";
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.doForFichierImage(this);
     }
 
     public int getHauteur() {
