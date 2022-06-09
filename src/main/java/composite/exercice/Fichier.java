@@ -1,6 +1,6 @@
 package composite.exercice;
 
-public class Fichier {
+public class Fichier implements DossierComponent{
     private int tailleEnKo;
 
     public Fichier(String titre, int tailleEnKo) {
