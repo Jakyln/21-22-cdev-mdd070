@@ -26,6 +26,7 @@ public class PlateauIterator implements Iterator<String> {
 
     @Override
     public boolean hasNext() {
-        return x < echiquier.length && y < echiquier[x].length;
+        return x < echiquier.length
+                && y < echiquier[x].length;
     }
 }

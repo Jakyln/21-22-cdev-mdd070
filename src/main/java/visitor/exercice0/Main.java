@@ -1,4 +1,9 @@
-package visitor;
+package visitor.exercice0;
+
+import visitor.exercice0.element.Banque;
+import visitor.exercice0.element.PointDInteret;
+import visitor.exercice0.element.StationService;
+import visitor.exercice0.visitor.TouristeVisitor;
 
 import java.util.ArrayList;
 import java.util.List;

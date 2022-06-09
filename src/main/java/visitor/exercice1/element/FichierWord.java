@@ -1,4 +1,6 @@
-package visitor.exercice;
+package visitor.exercice1.element;
+
+import visitor.exercice1.visitor.Visitor;
 
 public class FichierWord implements Fichier {
 
@@ -20,6 +22,11 @@ public class FichierWord implements Fichier {
     @Override
     public String getType() {
         return "docx";
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.doForFichierWord(this);
     }
 
     public String getAuthor() {

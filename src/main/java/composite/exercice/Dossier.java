@@ -1,33 +1,41 @@
 package composite.exercice;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
-public class Dossier {
+public class Dossier implements DossierComponent {
 
-    private List<Dossier> dossiers = new ArrayList<>();
-    private List<Fichier> fichiers = new ArrayList<>();
+    private List<DossierComponent> components = new ArrayList<>();
+
     private String titre;
 
     public Dossier(String titre) {
         this.titre = titre;
     }
 
-
     public void addSousDosser(Dossier dossier2) {
-        dossiers.add(dossier2);
+        components.add(dossier2);
     }
 
     public void addFichier(Fichier fichier1) {
-        fichiers.add(fichier1);
+        components.add(fichier1);
     }
 
-    public List<Fichier> getFichiers() {
-        return fichiers;
+    @Override
+    public int getTaille() {
+        int tailleTotale = 0;
+        for (DossierComponent component : components) {
+            int taille = component.getTaille();
+            tailleTotale = tailleTotale + taille;
+        }
+        return tailleTotale;
     }
 
-    public List<Dossier> getSousDossiers() {
-        return dossiers;
-    }
+    //public List<Fichier> getFichiers() {
+    //    return fichiers;
+    //}
+
+    // public List<Dossier> getSousDossiers() {
+    //     return dossiers;
+    // }
 }

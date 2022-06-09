@@ -40,6 +40,7 @@ public class Main {
         echiquer[0][2] = "C";
         echiquer[0][3] = "F";
         Plateau plateau = new Plateau(echiquer);
+//        plateau.getPiece(1, 2);
 
         for (PlateauIterator plateauIterator = plateau.iterator(); plateauIterator.hasNext(); ) {
             String element = plateauIterator.next();
