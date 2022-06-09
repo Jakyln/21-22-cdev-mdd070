@@ -1,6 +1,6 @@
 package composite.exercice2;
 
-public class Ingredient {
+public class Ingredient implements CookingComponent{
     private double prix;
     private String unite;
 
