@@ -19,15 +19,7 @@ public class Recette {
         return ingredients;
     }
 
-    public void setIngredients(Map<Ingredient, Double> ingredients) {
-        this.ingredients = ingredients;
-    }
-
     public Map<Recette, Double> getSousRecettes() {
         return sousRecettes;
-    }
-
-    public void setSousRecettes(Map<Recette, Double> sousRecettes) {
-        this.sousRecettes = sousRecettes;
     }
 }
